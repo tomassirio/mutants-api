@@ -1,0 +1,31 @@
+version : '2'
+services:
+  mutantsapi:
+    build:
+      context: .
+      dockerfile: mutantsapi.dockerfile.yaml
+    ports:
+      - "8080:8080"
+    networks:
+      - net-spring-db
+    volumes:
+      - .:/MutantsApi
+    depends_on:
+      - mysqldbserver
+  mysqldbserver:
+    build:
+      context: .
+      dockerfile: mysql.dockerfile.yaml
+    ports:
+      - "3306:3306"
+    networks:
+      - net-spring-db
+    environment:
+      MYSQL_DATABASE: mutants
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+      MYSQL_ROOT_PASSWORD: myrootpassword
+    container_name: mysqldbserver
+networks:
+  net-spring-db:
+    driver: bridge
