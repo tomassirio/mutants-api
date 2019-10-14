@@ -66,6 +66,7 @@ Create a Database where the verified DNA's are saved.
 Expose a service `/stats` where you can get a Json where you can see
 the stats on the verified DNAs:
 >ADN: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
+
 ---------------------------------------------------------
 
 <H3>Steps Taken</H3>
