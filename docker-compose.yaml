@@ -3,7 +3,7 @@ services:
   mutantsapi:
     build:
       context: .
-      dockerfile: mutantsapi.dockerfile.yaml
+      dockerfile: simple-mutants.docker.yaml
     ports:
       - "8080:8080"
     networks:
@@ -22,9 +22,9 @@ services:
       - net-spring-db
     environment:
       MYSQL_DATABASE: mutants
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
-      MYSQL_ROOT_PASSWORD: myrootpassword
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
     container_name: mysqldbserver
 networks:
   net-spring-db:
