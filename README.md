@@ -56,7 +56,7 @@ Create an api rest, host that api on a cloud computing service, create the servi
 >POST → /mutant/
 >
 >{
->“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+>"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
 >}
 
 A HTTP 200-Ok should be returned if we get a mutant. Instead, a 403-Forbidden should be returned in case it's a human

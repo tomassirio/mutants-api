@@ -1,0 +1,7 @@
+FROM java:8-jdk-alpine
+#RUN MVN clean install
+COPY ./target/MutantsAPI-0.0.1-SNAPSHOT.war /usr/app/
+WORKDIR /usr/app
+EXPOSE 8080
+ENV JAVA_OPTS=""
+ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar "MutantsAPI-0.0.1-SNAPSHOT.war"

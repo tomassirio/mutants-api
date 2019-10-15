@@ -1,4 +1,4 @@
-FROM mysql/mysql-server
+FROM mysql:8.0.14
 MAINTAINER Tomas Sirio <tomassirio@gmail.com>
 # Copy the database initialize script:
 # Contents of /docker-entrypoint-initdb.d are run on mysqld startup
